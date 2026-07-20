@@ -1,0 +1,15 @@
+@mixin flexCenter($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin fullWidth {
+  width: 100%;
+}
+
+@mixin responsiveGrid($size) {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
+}
