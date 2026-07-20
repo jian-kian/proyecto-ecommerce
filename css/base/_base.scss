@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body {
+  @include fullWidth;
+  font-size: 15px;
+  font-weight: 300;
+  color: $colorText;
+  font-family: $fontMain;
+  margin: 0;
+}

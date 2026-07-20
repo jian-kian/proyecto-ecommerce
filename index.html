@@ -7,14 +7,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/functions.js" defer></script>
     <title>Tienda Under Armour</title>
 </head>
 <body>
     <header class="header">
-        <i class="header__icon"><img src="img/icono-menu.png" alt="Icono Menu" class="header__img"></i>
+        <i class="header__icon"><img src="img/icono-menu.png" alt="Icono Menu" class="header__img" id="menuButton"></i>
         <i class="header__logo"><img src="img/logo-ua.png" alt="Logo Under Armour" class="header__img"></i>
-        <i class="header__icon"><img src="img/icono-carro.png" alt="Icono Carrito" class="header__img"></i>
+        <div class="cart-icon">
+            <img src="img/icono-carro.png"><span id="cartBadge">0</span>
+        </div>
     </header>
+
+    <aside class="menu" id="menu">
+        <button class="menu__close" id="closeMenu">✕</button>
+
+        <nav class="menu__nav">
+            <a href="#">Inicio</a>
+            <a href="#">Hombre</a>
+            <a href="#">Mujer</a>
+            <a href="#">Calzado</a>
+            <a href="#">Accesorios</a>
+        </nav>
+    </aside>
 
     <main>
         <section class="banner">
@@ -27,77 +42,72 @@
                 <img src="img/UA-challenger-train.avif" alt="UA Challenger Train" class="products-grid__img">
                 <h3 class="products-grid__title">UA Challenger Train</h3>
                 <p class="products-grid__price">$699.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
-                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="Chamarra UA Unstoppable Woven" class="products-grid__img">
-                <h3 class="products-grid__title">Chamarra UA Unstoppable Woven</h3>
+                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="UA Unstoppable Woven" class="products-grid__img">
+                <h3 class="products-grid__title">UA Unstoppable Woven</h3>
                 <p class="products-grid__price">$2,499.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
                 <img src="img/UA-velociti-distance.avif" alt="UA Velociti Distance" class="products-grid__img">
                 <h3 class="products-grid__title">UA Velociti Distance</h3>
                 <p class="products-grid__price">$3,499.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
                 <img src="img/UA-unstoppable.avif" alt="UA Unstoppable" class="products-grid__img">
                 <h3 class="products-grid__title">UA Unstoppable</h3>
                 <p class="products-grid__price">$2,099.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
                 <img src="img/UA-velociti-storm.avif" alt="UA Velociti Storm" class="products-grid__img">
                 <h3 class="products-grid__title">UA Velociti Storm</h3>
                 <p class="products-grid__price">$1,699.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
                 <img src="img/UA-infinity.avif" alt="UA Infinite" class="products-grid__img">
                 <h3 class="products-grid__title">UA Infinite</h3>
                 <p class="products-grid__price">$2,499.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
             
             <article class="products-grid__item">
                 <img src="img/UA-icon-tapered.avif" alt="UA Icon Tapered" class="products-grid__img">
                 <h3 class="products-grid__title">UA Icon Tapered</h3>
                 <p class="products-grid__price">$1,999.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
                 <img src="img/UA-legend-down.avif" alt="UA Legend Down" class="products-grid__img">
                 <h3 class="products-grid__title">UA Legend Down</h3>
                 <p class="products-grid__price">$2,999.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
 
             <article class="products-grid__item">
                 <img src="img/UA-phantom-1.avif" alt="UA Phantom 1" class="products-grid__img">
                 <h3 class="products-grid__title">UA Phantom 1</h3>
                 <p class="products-grid__price">$3,299.00</p>
+                <button class="products-grid__button">Agregar al carrito</button>
             </article>
         </section>
 
         <section class="cart">
-            <h2 class="cart__title">CARRITO</h2>
-            <div class="cart__item">
-                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="Chamarra UA Unstoppable Woven" class="cart__img">
-                <p class="cart__text">Chamarra UA Unstoppable Woven</h2>
-                <p class="cart__price">$2,499.00</p>
-                <i class="cart__icon"><img src="img/icono-quitar.png" alt="Icono Quitar" class="cart__icon--delete-icon"></i>
+            <div class="cart__header">
+                <h2 class="cart__title">Carrito</h2>
+                <button class="cart__close" id="closeCart">✕</button>
             </div>
-            <div class="cart__item">
-                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="Chamarra UA Unstoppable Woven" class="cart__img">
-                <p class="cart__text">Chamarra UA Unstoppable Woven</h2>
-                <p class="cart__price">$2,499.00</p>
-                <i class="cart__icon"><img src="img/icono-quitar.png" alt="Icono Quitar" class="cart__icon--delete-icon"></i>
-            </div>
-            <div class="cart__item">
-                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="Chamarra UA Unstoppable Woven" class="cart__img">
-                <p class="cart__text">Chamarra UA Unstoppable Woven</h2>
-                <p class="cart__price">$2,499.00</p>
-                <i class="cart__icon"><img src="img/icono-quitar.png" alt="Icono Quitar" class="cart__icon--delete-icon"></i>
-            </div>
+            <div class="cart__products"></div>
         </section>
     </main>
 </body>

@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  @include fullWidth;
+  @include flexCenter(space-between);
+  padding: 20px 50px;
+  background-color: $colorDark;
+  box-sizing: border-box;
+
+  &__icon,
+  &__logo {
+    width: 35px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  &__img {
+    @include fullWidth;
+  }
+
+  .cart-icon {
+    position: relative;
+    cursor: pointer;
+
+    img{
+      width: 35px;
+      display:inline-block;
+    }
+
+    span{
+        position:absolute;
+        top:-8px;
+        right:-8px;
+        width:22px;
+        height:22px;
+        border-radius:50%;
+        background: $colorRed;
+        color: $colorWhite;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:.75rem;
+        font-weight:bold;
+    }
+  }
+}
