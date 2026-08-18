@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda Under Armour: conoce nuestros productos deportivos.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -12,100 +13,98 @@
 </head>
 <body>
     <header class="header">
-        <i class="header__icon"><img src="img/icono-menu.png" alt="Icono Menu" class="header__img" id="menuButton"></i>
-        <i class="header__logo"><img src="img/logo-ua.png" alt="Logo Under Armour" class="header__img"></i>
-        <div class="cart-icon">
-            <img src="img/icono-carro.png"><span id="cartBadge">0</span>
-        </div>
+        <button class="header__icon" type="button" aria-label="Abrir menú" aria-controls="menu">
+            <img src="img/icono-menu.png" alt="Abrir menú" class="header__img" id="menuButton">
+        </button>
+        <a class="header__logo" href="index.html" aria-label="Under Armour, ir al inicio">
+            <img src="img/logo-ua.png" alt="Logo de Under Armour" class="header__img">
+        </a>
+        <button class="cart-icon" type="button" aria-label="Abrir carrito" aria-controls="cart">
+            <img src="img/icono-carro.png" alt="Carrito de compras">
+            <span id="cartBadge" aria-live="polite">0</span>
+        </button>
     </header>
 
-    <aside class="menu" id="menu">
-        <button class="menu__close" id="closeMenu">✕</button>
-
-        <nav class="menu__nav">
-            <a href="#">Inicio</a>
+    <aside class="menu" id="menu" role="dialog" aria-label="Menú principal" aria-modal="true">
+        <button class="menu__close" id="closeMenu" type="button" aria-label="Cerrar menú">✕</button>
+        <nav class="menu__nav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
             <a href="#">Hombre</a>
             <a href="#">Mujer</a>
             <a href="#">Calzado</a>
             <a href="#">Accesorios</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
     </aside>
 
     <main>
-        <section class="banner">
-            <h2 class="banner__title">Productos Nuevos</h2>
+        <section class="banner" aria-labelledby="banner-title">
+            <h1 class="banner__title" id="banner-title">Productos Nuevos</h1>
             <p class="banner__text">Conoce nuestros productos nuevos</p>
         </section>
 
-        <section class="products-grid">
+        <section class="products-grid" aria-labelledby="products-title">
+            <h2 class="sr-only" id="products-title">Productos disponibles</h2>
             <article class="products-grid__item">
-                <img src="img/UA-challenger-train.avif" alt="UA Challenger Train" class="products-grid__img">
+                <img src="img/UA-challenger-train.avif" alt="Tenis UA Challenger Train" class="products-grid__img">
                 <h3 class="products-grid__title">UA Challenger Train</h3>
                 <p class="products-grid__price">$699.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="UA Unstoppable Woven" class="products-grid__img">
+                <img src="img/chamarra-UA-unstoppable-woven.avif" alt="Chamarra UA Unstoppable Woven" class="products-grid__img">
                 <h3 class="products-grid__title">UA Unstoppable Woven</h3>
                 <p class="products-grid__price">$2,499.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/UA-velociti-distance.avif" alt="UA Velociti Distance" class="products-grid__img">
+                <img src="img/UA-velociti-distance.avif" alt="Tenis UA Velociti Distance" class="products-grid__img">
                 <h3 class="products-grid__title">UA Velociti Distance</h3>
                 <p class="products-grid__price">$3,499.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/UA-unstoppable.avif" alt="UA Unstoppable" class="products-grid__img">
+                <img src="img/UA-unstoppable.avif" alt="Conjunto UA Unstoppable" class="products-grid__img">
                 <h3 class="products-grid__title">UA Unstoppable</h3>
                 <p class="products-grid__price">$2,099.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/UA-velociti-storm.avif" alt="UA Velociti Storm" class="products-grid__img">
+                <img src="img/UA-velociti-storm.avif" alt="Tenis UA Velociti Storm" class="products-grid__img">
                 <h3 class="products-grid__title">UA Velociti Storm</h3>
                 <p class="products-grid__price">$1,699.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/UA-infinity.avif" alt="UA Infinite" class="products-grid__img">
+                <img src="img/UA-infinity.avif" alt="Tenis UA Infinite" class="products-grid__img">
                 <h3 class="products-grid__title">UA Infinite</h3>
                 <p class="products-grid__price">$2,499.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-            
             <article class="products-grid__item">
-                <img src="img/UA-icon-tapered.avif" alt="UA Icon Tapered" class="products-grid__img">
+                <img src="img/UA-icon-tapered.avif" alt="Pantalón UA Icon Tapered" class="products-grid__img">
                 <h3 class="products-grid__title">UA Icon Tapered</h3>
                 <p class="products-grid__price">$1,999.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/UA-legend-down.avif" alt="UA Legend Down" class="products-grid__img">
+                <img src="img/UA-legend-down.avif" alt="Chamarra UA Legend Down" class="products-grid__img">
                 <h3 class="products-grid__title">UA Legend Down</h3>
                 <p class="products-grid__price">$2,999.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
-
             <article class="products-grid__item">
-                <img src="img/UA-phantom-1.avif" alt="UA Phantom 1" class="products-grid__img">
+                <img src="img/UA-phantom-1.avif" alt="Tenis UA Phantom 1" class="products-grid__img">
                 <h3 class="products-grid__title">UA Phantom 1</h3>
                 <p class="products-grid__price">$3,299.00</p>
-                <button class="products-grid__button">Agregar al carrito</button>
+                <button class="products-grid__button" type="button">Agregar al carrito</button>
             </article>
         </section>
 
-        <section class="cart">
+        <section class="cart" id="cart" role="region" aria-label="Carrito de compras" aria-live="polite">
             <div class="cart__header">
                 <h2 class="cart__title">Carrito</h2>
-                <button class="cart__close" id="closeCart">✕</button>
+                <button class="cart__close" id="closeCart" type="button" aria-label="Cerrar carrito">✕</button>
             </div>
             <div class="cart__products"></div>
         </section>

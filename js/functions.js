@@ -1,86 +1,68 @@
-//Menu
+// Menú
 const menu = document.querySelector("#menu");
 const menuButton = document.querySelector("#menuButton");
 const closeMenu = document.querySelector("#closeMenu");
 
-//Abrir Menu
-menuButton.addEventListener("click",()=>{
-    menu.classList.add("menu--active");
-});
+if (menu && menuButton && closeMenu) {
+    menuButton.addEventListener("click", () => {
+        menu.classList.add("menu--active");
+    });
 
-//Cerrar Menu
-closeMenu.addEventListener("click",()=>{
-    menu.classList.remove("menu--active");
-});
+    closeMenu.addEventListener("click", () => {
+        menu.classList.remove("menu--active");
+    });
+}
 
-//Botton agregar producto a carrito
+// Carrito
 const buttons = document.querySelectorAll(".products-grid__button");
 const badge = document.querySelector("#cartBadge");
-let total = 0;
 const cart = document.querySelector(".cart");
 const cartIcon = document.querySelector(".cart-icon");
-
-cartIcon.addEventListener("click",()=>{
-    cart.classList.toggle("cart--active");
-});
-
 const cartContainer = document.querySelector(".cart__products");
+const closeCart = document.querySelector("#closeCart");
+let total = 0;
+
+if (cartIcon && cart) {
+    cartIcon.addEventListener("click", () => {
+        cart.classList.toggle("cart--active");
+    });
+}
+
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         total++;
-        badge.textContent = total;
+        if (badge) badge.textContent = total;
+
         const product = button.parentElement;
-        //Item de carrito
         const image = product.querySelector("img").src;
+        const alt = product.querySelector("img").alt;
         const title = product.querySelector("h3").textContent;
         const price = product.querySelector(".products-grid__price").textContent;
         const item = document.createElement("div");
 
         item.className = "cart__item";
-
         item.innerHTML = `
-            <img src="${image}" class="cart__img">
-
+            <img src="${image}" alt="${alt}" class="cart__img">
             <div class="cart__info">
-                <h4>${title}</h4>
+                <h3>${title}</h3>
                 <p>${price}</p>
             </div>
-
-            <button class="cart__remove">
-                ✕
-            </button>
+            <button class="cart__remove" type="button" aria-label="Eliminar ${title} del carrito">✕</button>
         `;
 
-        cartContainer.appendChild(item);
+        if (cartContainer) cartContainer.appendChild(item);
 
         const removeButton = item.querySelector(".cart__remove");
-
         removeButton.addEventListener("click", () => {
-
             item.remove();
-            total--;
-
-            if (total < 0) {
-                total = 0;
-            }
-
-            badge.textContent = total;
+            total = Math.max(0, total - 1);
+            if (badge) badge.textContent = total;
         });
     });
 });
 
-//Cerrar Carrito
-if (closeCart) {
+if (closeCart && cart) {
     closeCart.addEventListener("click", () => {
         cart.classList.remove("cart--active");
     });
 }
-
-//Eliminar item de carrito
-const remove = item.querySelector(".remove");
-
-remove.addEventListener("click", () => {
-    item.remove();
-    total--;
-    badge.textContent = total;
-});
