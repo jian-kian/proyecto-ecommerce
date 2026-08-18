@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto de la tienda Under Armour.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacto | Tienda Under Armour</title>
+</head>
+<body>
+    <header class="header">
+        <a class="header__logo" href="index.html" aria-label="Under Armour, ir al inicio">
+            <img src="img/logo-ua.png" alt="Logo de Under Armour" class="header__img">
+        </a>
+        <a class="header__home" href="index.html">Inicio</a>
+    </header>
+
+    <main class="contact">
+        <section class="contact__intro" aria-labelledby="contact-title">
+            <h1 id="contact-title">Contáctanos</h1>
+            <p>¿Tienes alguna pregunta? Completa el formulario y nos pondremos en contacto contigo.</p>
+            <p lang="en">We are here to help you.</p>
+        </section>
+
+        <section class="contact__form-section" aria-labelledby="form-title">
+            <h2 id="form-title">Formulario de contacto</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="contact-form__field">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" name="telefono" type="tel" autocomplete="tel">
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="asunto">Asunto</label>
+                    <input id="asunto" name="asunto" type="text" required>
+                </div>
+
+                <div class="contact-form__field">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                </div>
+
+                <div class="contact-form__actions">
+                    <button class="contact-form__button" type="submit">Enviar mensaje</button>
+                    <a class="contact-form__back" href="index.html">Volver a la página principal</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Under Armour. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
